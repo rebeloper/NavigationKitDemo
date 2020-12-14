@@ -6,12 +6,24 @@
 //
 
 import SwiftUI
+import NavigationKit
 
 @main
 struct NavigationKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                RootView().tabItem {
+                    Image(systemName: "tv.fill")
+                    Text("First Tab")
+                }.rootable()
+                
+                RootView().tabItem {
+                    Image(systemName: "tv.fill")
+                    Text("Second Tab")
+                }.rootable()
+            }
+            
         }
     }
 }
