@@ -10,20 +10,42 @@ import NavigationKit
 
 @main
 struct NavigationKitDemoApp: App {
+    
+    let firstTabNavigation = Navigation()
+    let secondTabNavigation = Navigation()
+    
+    @State var selectedTab: Tab = .second
+    
     var body: some Scene {
         WindowGroup {
-            TabView {
+            TabView(selection: $selectedTab) {
                 RootView().tabItem {
-                    Image(systemName: "tv.fill")
-                    Text("First Tab")
-                }.rootable()
+                    VStack {
+                        Image(systemName: "1.circle.fill")
+                        Text("First Tab")
+                    }
+                }.tag(Tab.first).rootable(firstTabNavigation)
                 
                 RootView().tabItem {
-                    Image(systemName: "tv.fill")
+                    Image(systemName: "2.circle.fill")
                     Text("Second Tab")
-                }.rootable()
+                }.tag(Tab.second).rootable(secondTabNavigation)
+            }.onTapGesture(count: 2) {
+                switch selectedTab {
+                case .first:
+                    firstTabNavigation.isPushRootActive = false
+                case .second:
+                    secondTabNavigation.isPushRootActive = false
+                }
             }
             
         }
+    }
+}
+
+extension NavigationKitDemoApp {
+    enum Tab: Hashable {
+        case first
+        case second
     }
 }
