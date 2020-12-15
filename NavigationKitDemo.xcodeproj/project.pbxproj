@@ -19,6 +19,7 @@
 		C9BA2EA425888FCC004DAEEE /* Tab2ThirdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA2EA325888FCC004DAEEE /* Tab2ThirdView.swift */; };
 		C9BA2EA72588902F004DAEEE /* Tab1FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA2EA62588902F004DAEEE /* Tab1FourthView.swift */; };
 		C9BA2EAA2588903D004DAEEE /* Tab2FourthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA2EA92588903D004DAEEE /* Tab2FourthView.swift */; };
+		C9BA2EAE2588945A004DAEEE /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA2EAD2588945A004DAEEE /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C9BA2EA325888FCC004DAEEE /* Tab2ThirdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2ThirdView.swift; sourceTree = "<group>"; };
 		C9BA2EA62588902F004DAEEE /* Tab1FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab1FourthView.swift; sourceTree = "<group>"; };
 		C9BA2EA92588903D004DAEEE /* Tab2FourthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab2FourthView.swift; sourceTree = "<group>"; };
+		C9BA2EAD2588945A004DAEEE /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 		C9BA2E9725888EC0004DAEEE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				C9BA2EAD2588945A004DAEEE /* TabBarView.swift */,
 				C9BA2E9125888DD6004DAEEE /* Tab1RootView.swift */,
 				C9BA2E9425888E00004DAEEE /* Tab2RootView.swift */,
 				C9BA2E9825888EEA004DAEEE /* Tab1SecondView.swift */,
@@ -183,6 +186,7 @@
 				C9BA2E642587CA26004DAEEE /* NavigationKitDemoApp.swift in Sources */,
 				C9BA2EA425888FCC004DAEEE /* Tab2ThirdView.swift in Sources */,
 				C9BA2E9225888DD6004DAEEE /* Tab1RootView.swift in Sources */,
+				C9BA2EAE2588945A004DAEEE /* TabBarView.swift in Sources */,
 				C9BA2EA125888F9D004DAEEE /* Tab1ThirdView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -379,7 +383,7 @@
 			repositoryURL = "https://github.com/rebeloper/NavigationKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.7;
+				minimumVersion = 0.0.12;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

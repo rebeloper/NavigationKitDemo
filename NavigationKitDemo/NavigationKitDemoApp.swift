@@ -14,28 +14,55 @@ struct NavigationKitDemoApp: App {
     let firstTabNavigation = Navigation()
     let secondTabNavigation = Navigation()
     
-    @State var selectedTab: Tab = .second
+    @State var selectedTab = 1
     
     var body: some Scene {
         WindowGroup {
             TabView(selection: $selectedTab) {
-                Tab1RootView().tabItem {
+//                NavigationView {
+//                    Tab1RootView()
+//                }
+//                .tabItem {
+//                    VStack {
+//                        Image(systemName: "1.circle.fill")
+//                        Text("First Tab")
+//                    }
+//                }.tag(0).rootable(firstTabNavigation)
+//
+//                NavigationView {
+//                    Tab2RootView()
+//                }
+//                .tabItem {
+//                    Image(systemName: "2.circle.fill")
+//                    Text("Second Tab")
+//                }.tag(1).rootable(secondTabNavigation)
+                
+                TabBarView(rootView: {
+                    Tab1RootView()
+                }, tabItemView: {
                     VStack {
                         Image(systemName: "1.circle.fill")
                         Text("First Tab")
                     }
-                }.tag(Tab.first).rootable(firstTabNavigation)
+                }, navigation: firstTabNavigation, tabTag: 0)
                 
-                Tab2RootView().tabItem {
-                    Image(systemName: "2.circle.fill")
-                    Text("Second Tab")
-                }.tag(Tab.second).rootable(secondTabNavigation)
+                TabBarView(rootView: {
+                    Tab2RootView()
+                }, tabItemView: {
+                    VStack {
+                        Image(systemName: "2.circle.fill")
+                        Text("Second Tab")
+                    }
+                }, navigation: secondTabNavigation, tabTag: 1)
+                
             }.onTapGesture(count: 2) {
                 switch selectedTab {
-                case .first:
+                case 0:
                     firstTabNavigation.isPushRootActive = false
-                case .second:
+                case 1:
                     secondTabNavigation.isPushRootActive = false
+                default:
+                    print("No such selected tab: \(selectedTab)")
                 }
             }
             
@@ -43,9 +70,3 @@ struct NavigationKitDemoApp: App {
     }
 }
 
-extension NavigationKitDemoApp {
-    enum Tab: Hashable {
-        case first
-        case second
-    }
-}
