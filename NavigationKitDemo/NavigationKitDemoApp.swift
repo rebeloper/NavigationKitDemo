@@ -19,14 +19,14 @@ struct NavigationKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
             TabView(selection: $selectedTab) {
-                RootView().tabItem {
+                Tab1RootView().tabItem {
                     VStack {
                         Image(systemName: "1.circle.fill")
                         Text("First Tab")
                     }
                 }.tag(Tab.first).rootable(firstTabNavigation)
                 
-                RootView().tabItem {
+                Tab2RootView().tabItem {
                     Image(systemName: "2.circle.fill")
                     Text("Second Tab")
                 }.tag(Tab.second).rootable(secondTabNavigation)
