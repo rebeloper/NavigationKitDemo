@@ -18,6 +18,13 @@ struct NavigationKitDemoApp: App {
     
     var body: some Scene {
         WindowGroup {
+            
+//            Tab2RootView()//.rootable()
+            
+//            NavigationView {
+//                Tab1RootView()
+//            }//.rootable()
+            
             TabView(selection: $selectedTab) {
 //                NavigationView {
 //                    Tab1RootView()
@@ -36,7 +43,7 @@ struct NavigationKitDemoApp: App {
 //                    Image(systemName: "2.circle.fill")
 //                    Text("Second Tab")
 //                }.tag(1).rootable(secondTabNavigation)
-                
+
                 TabBarView(rootView: {
                     Tab1RootView()
                 }, tabItemView: {
@@ -45,7 +52,7 @@ struct NavigationKitDemoApp: App {
                         Text("First Tab")
                     }
                 }, navigation: firstTabNavigation, tabTag: 0)
-                
+
                 TabBarView(rootView: {
                     Tab2RootView()
                 }, tabItemView: {
@@ -54,7 +61,7 @@ struct NavigationKitDemoApp: App {
                         Text("Second Tab")
                     }
                 }, navigation: secondTabNavigation, tabTag: 1)
-                
+
             }.onTapGesture(count: 2) {
                 switch selectedTab {
                 case 0:
