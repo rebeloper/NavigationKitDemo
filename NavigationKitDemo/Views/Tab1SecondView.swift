@@ -11,8 +11,9 @@ struct Tab1SecondView: View {
     var body: some View {
         VStack(spacing: 12) {
             Text("Dismiss").dismisses()
+            Text("Dismiss NavigationView Sheet").dismissesNavigationViewSheet()
             Text("Push Third View").pushes(Tab1ThirdView())
-//            Text("Push Third View as Root").pushesAsRoot(Tab1ThirdView()) // only one view is allowed be the root of the navigation stack; if you comment in this line than you have to comment out the "pushesAsRoot" line in RootView
+            Text("Push Third View as Root").pushesAsRoot(Tab1ThirdView()) // only one view is allowed be the root of the navigation stack; if you comment in this line than you have to comment out the "pushesAsRoot" line in RootView; unless you are presnting Tab1SecondView in NavigationView with "presentsNavigationView" - in this case this is the root view
             Spacer()
         }
         .navigationTitle("Tab 1 - Second View")
