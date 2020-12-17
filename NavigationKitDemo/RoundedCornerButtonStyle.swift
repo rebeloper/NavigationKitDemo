@@ -1,5 +1,5 @@
 //
-//  NKButton.swift
+//  RoundedCornerButtonStyle.swift
 //  NavigationKitDemo
 //
 //  Created by Alex Nagy on 17.12.2020.
