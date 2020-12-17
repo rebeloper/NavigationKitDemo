@@ -10,7 +10,7 @@ import SwiftUI
 struct Tab1RootView: View {
     var body: some View {
         VStack(spacing: 12) {
-            Text("Push Second View").pushes(Tab1SecondView())
+            Text("Push Second View").pushes(Tab1SecondView()).asButton().buttonStyle(RoundedCornerButtonStyle())
             Text("Push Second View as Root").pushesAsRoot(Tab1SecondView())
             Spacer()
         }
