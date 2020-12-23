@@ -12,6 +12,12 @@ struct Tab1RootView: View {
         VStack(spacing: 12) {
             Text("Push Second View").pushes(Tab1SecondView()).asButton().buttonStyle(RoundedCornerButtonStyle())
             Text("Push Second View as Root").pushesAsRoot(Tab1SecondView())
+            Text("Push Second View after Action").pushes(Tab1SecondView()) { (token) in
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
+                    token.navigate()
+                }
+            }
+            Text("Push Second View as Button").pushesAsIs(Tab1SecondView())
             Spacer()
         }
         .navigationTitle("Tab 1 - Root View")

@@ -383,7 +383,7 @@
 			repositoryURL = "https://github.com/rebeloper/NavigationKit.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.2.1;
+				minimumVersion = 0.2.8;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
