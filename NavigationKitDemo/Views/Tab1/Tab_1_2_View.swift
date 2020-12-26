@@ -31,6 +31,7 @@ struct Tab_1_2_View: View {
                 }
             }
         }
+        .padding()
         .largeNavigationBar(titleView:
                     Text("Tab_1_2_View").bold().lineLimit(1),
                 leadingView:

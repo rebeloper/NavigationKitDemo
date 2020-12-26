@@ -16,18 +16,24 @@ struct NavigationKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
             TabView(selection: $selectedTab) {
+                
                 NavigationKitView {
                     Tab_0_0_View()
-                }.tabItem {
+                }
+                .tabItem {
                     VStack {
                         Image(systemName: "0.circle.fill")
                         Text("Zero")
                     }
                 }.tag(0)
                 
-                NavigationKitView {
+                NavigationKitView(transitionType: NavigationTransition.custom(.scale), easing: Animation.easeInOut(duration: 0.5), rootView: {
                     Tab_1_0_View()
-                }.tabItem {
+                })
+//                NavigationKitView {
+//                    Tab_1_0_View()
+//                }
+                .tabItem {
                     Image(systemName: "1.circle.fill")
                     Text("One")
                 }.tag(1)

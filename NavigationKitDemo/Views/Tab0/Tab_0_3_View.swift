@@ -27,6 +27,7 @@ struct Tab_0_3_View: View {
             
             Spacer()
         }
+        .padding()
         .largeNavigationBar(titleView:
                     Text("Tab_0_3_View").bold(),
                 leadingView:

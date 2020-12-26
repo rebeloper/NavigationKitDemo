@@ -21,6 +21,7 @@ struct Tab_0_1_View: View {
             }
             Spacer()
         }
+        .padding()
         .inlineNavigationBar(titleView:
                     Text("Tab_0_1_View").bold(),
                 leadingView:
