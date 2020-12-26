@@ -21,6 +21,7 @@ struct Tab2SecondView: View {
                 presentationMode.wrappedValue.dismiss()
             }
             Text("Present Third View").presents(Tab2ThirdView())
+            Text("Push Tab 1 Fourth View").pushes(Tab1FourthView())
             Spacer()
         }
         .navigationTitle("Tab 2 - Second View")

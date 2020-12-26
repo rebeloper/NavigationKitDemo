@@ -34,12 +34,12 @@ struct Tab1RootView: View {
                 Text("Push Second View").pushes(Tab1SecondView()).buttonStyle(RoundedCornerButtonStyle())
                 Text("Push Second View as Root").pushesAsRoot(Tab1SecondView(), isActive: $isRootNavigationActive1)
                 Text("Push Second View as Root 2").pushesAsRoot(Tab2SecondView(), isActive: $isRootNavigationActive2)
-                Text("Push Second View after Action").pushes(Tab1SecondView()) { (token) in
+                Text("Push Second View after Action").pushes(Tab1SecondView()) { (navigation) in
                     DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(3)) {
-                        token.navigate()
+                        navigation.resume()
                     }
                 }
-                Text("Push Second View as Button").pushesAsIs(Tab1SecondView())
+                Text("Push Second View as is").pushesAsIs(Tab1SecondView())
                 Spacer()
             }
             .navigationTitle("Tab 1 - Root View")

@@ -12,9 +12,9 @@ struct Tab1SecondView: View {
     var body: some View {
         VStack(spacing: 12) {
             Text("Dismiss").dismisses()
-            Text("Dismiss after 2 seconds").dismisses { (token) in
+            Text("Dismiss after 2 seconds").dismisses { (navigation) in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    token.navigate()
+                    navigation.resume()
                 }
             }
             Text("Dismiss NavigationView Sheet").dismissesNavigationViewSheet()

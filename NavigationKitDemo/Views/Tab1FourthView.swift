@@ -15,9 +15,12 @@ struct Tab1FourthView: View {
         VStack(spacing: 12) {
             Text("Dismiss").dismisses()
             Text("Dismiss to Root").dismissesToRoot()
-//            Text("Dismiss To Root").onTapGesture {
-//                pushingInRoot?.wrappedValue.dismiss()
-//            }
+            Text("Dismiss to Root after 2 seconds").dismissesToRoot { (navigation) in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                    navigation.resume()
+                }
+            }
+            Text("Dismiss to Root as is").dismissesAsIsToRoot()
             Spacer()
         }
         .navigationTitle("Tab 1 - Fourth View")
