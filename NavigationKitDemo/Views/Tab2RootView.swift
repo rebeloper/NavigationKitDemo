@@ -6,11 +6,20 @@
 //
 
 import SwiftUI
+import NavigationKit
+
+extension EnvironmentValues {
+    public var rootNavigation3: Binding<Bool>? {
+        get { self[RootNavigationKey.self] }
+        set { self[RootNavigationKey.self] = newValue }
+    }
+    
+}
 
 struct Tab2RootView: View {
     
-    @State var isRootNavigationActive = false
-    @Environment(\.rootNavigation) var rootNavigation
+    @State var isRootNavigationActive3 = false
+    @Environment(\.rootNavigation3) var rootNavigation3
     
     var body: some View {
         
@@ -21,7 +30,7 @@ struct Tab2RootView: View {
                 Text("Present Second View with onDismiss callback").presents(Tab2SecondView(), onDismiss: {
                     print("Did dismiss SecondView")
                 })
-                Text("Push Second View as Root").pushesAsRoot(Tab2SecondView(), isActive: $isRootNavigationActive)
+                Text("Push Second View as Root").pushesAsRoot(Tab2SecondView(), isActive: $isRootNavigationActive3)
                 Text("Present Second View in NavigationView").presentsNavigationView(
                     Tab1SecondView().navigationBarTitleDisplayMode(.inline).disableSwipeToDismiss()
                 )
@@ -29,7 +38,7 @@ struct Tab2RootView: View {
             }
             .navigationTitle("Tab 2 - Root View")
         }
-        .environment(\.rootNavigation, $isRootNavigationActive)
+        .environment(\.rootNavigation3, $isRootNavigationActive3)
     }
 }
 

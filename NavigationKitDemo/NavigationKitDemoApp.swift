@@ -16,19 +16,22 @@ struct NavigationKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
             TabView(selection: $selectedTab) {
-                Tab1RootView()
-                .tabItem {
+                NavigationStackView {
+                    Tab_0_0_View()
+                }.tabItem {
                     VStack {
-                        Image(systemName: "1.circle.fill")
-                        Text("First Tab")
+                        Image(systemName: "0.circle.fill")
+                        Text("Zero")
                     }
                 }.tag(0)
-
-                Tab2RootView()
-                .tabItem {
-                    Image(systemName: "2.circle.fill")
-                    Text("Second Tab")
+                
+                NavigationStackView {
+                    Tab_1_0_View()
+                }.tabItem {
+                    Image(systemName: "1.circle.fill")
+                    Text("One")
                 }.tag(1)
+                
             }
             
         }
