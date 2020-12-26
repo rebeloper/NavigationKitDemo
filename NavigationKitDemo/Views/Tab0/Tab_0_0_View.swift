@@ -15,6 +15,10 @@ struct Tab_0_0_View: View {
     
     var body: some View {
         VStack {
+            
+            TextField("Type something...", text: $viewModel.text)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+            
             Button {
                 self.viewModel.fetchData { (result) in
                     switch result {
