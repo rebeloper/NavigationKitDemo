@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Screen<Content>: View where Content: View {
+    
     let content: () -> Content
 
     var body: some View {
@@ -15,5 +16,17 @@ struct Screen<Content>: View where Content: View {
             Color(.systemBackground).edgesIgnoringSafeArea(.all)
             content()
         }
+    }
+}
+
+struct Sheet<Content>: View where Content: View {
+    
+    @Binding var isPresented: Bool
+    let content: () -> Content
+
+    var body: some View {
+        EmptyView().sheet(isPresented: $isPresented, content: {
+            content()
+        })
     }
 }

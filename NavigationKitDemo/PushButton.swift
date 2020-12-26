@@ -148,4 +148,8 @@ extension View {
     }
 }
 
-
+public extension Bool {
+    mutating func present() {
+        self = true
+    }
+}

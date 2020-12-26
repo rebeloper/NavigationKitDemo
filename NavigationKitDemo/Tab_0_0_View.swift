@@ -13,7 +13,7 @@ struct Tab_0_0_View: View {
     
     var body: some View {
         VStack {
-            Color(.systemRed)
+            Color(.systemRed).edgesIgnoringSafeArea(.all)
         }
         .largeNavigationBar(titleView:
                     Text("Tab_0_0_View").bold().lineLimit(1),

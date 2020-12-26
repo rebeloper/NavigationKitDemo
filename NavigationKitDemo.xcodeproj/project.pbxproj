@@ -15,6 +15,9 @@
 		C91D6C8F25977E14009A0930 /* PushButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D6C8E25977E14009A0930 /* PushButton.swift */; };
 		C91D6C92259781F3009A0930 /* Tab_0_2_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D6C91259781F3009A0930 /* Tab_0_2_View.swift */; };
 		C91D6C95259781FF009A0930 /* Tab_0_3_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D6C94259781FF009A0930 /* Tab_0_3_View.swift */; };
+		C91D6C982597B94D009A0930 /* Tab_1_1_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D6C972597B94D009A0930 /* Tab_1_1_View.swift */; };
+		C91D6C9B2597BFEC009A0930 /* Tab_1_2_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D6C9A2597BFEC009A0930 /* Tab_1_2_View.swift */; };
+		C91D6C9E2597C2D4009A0930 /* Tab_1_3_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D6C9D2597C2D4009A0930 /* Tab_1_3_View.swift */; };
 		C98651F3258B4515004833A2 /* RoundedCornerButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98651F2258B4515004833A2 /* RoundedCornerButtonStyle.swift */; };
 		C9BA2E642587CA26004DAEEE /* NavigationKitDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA2E632587CA26004DAEEE /* NavigationKitDemoApp.swift */; };
 		C9BA2E682587CA29004DAEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BA2E672587CA29004DAEEE /* Assets.xcassets */; };
@@ -39,6 +42,9 @@
 		C91D6C8E25977E14009A0930 /* PushButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushButton.swift; sourceTree = "<group>"; };
 		C91D6C91259781F3009A0930 /* Tab_0_2_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab_0_2_View.swift; sourceTree = "<group>"; };
 		C91D6C94259781FF009A0930 /* Tab_0_3_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab_0_3_View.swift; sourceTree = "<group>"; };
+		C91D6C972597B94D009A0930 /* Tab_1_1_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab_1_1_View.swift; sourceTree = "<group>"; };
+		C91D6C9A2597BFEC009A0930 /* Tab_1_2_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab_1_2_View.swift; sourceTree = "<group>"; };
+		C91D6C9D2597C2D4009A0930 /* Tab_1_3_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab_1_3_View.swift; sourceTree = "<group>"; };
 		C98651F2258B4515004833A2 /* RoundedCornerButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornerButtonStyle.swift; sourceTree = "<group>"; };
 		C9BA2E602587CA26004DAEEE /* NavigationKitDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NavigationKitDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BA2E632587CA26004DAEEE /* NavigationKitDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationKitDemoApp.swift; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 				C91D6C91259781F3009A0930 /* Tab_0_2_View.swift */,
 				C91D6C94259781FF009A0930 /* Tab_0_3_View.swift */,
 				C91D6C8525977BB9009A0930 /* Tab_1_0_View.swift */,
+				C91D6C972597B94D009A0930 /* Tab_1_1_View.swift */,
+				C91D6C9A2597BFEC009A0930 /* Tab_1_2_View.swift */,
+				C91D6C9D2597C2D4009A0930 /* Tab_1_3_View.swift */,
 			);
 			path = NavigationKitDemo;
 			sourceTree = "<group>";
@@ -207,14 +216,17 @@
 				C9BA2E9E25888F2A004DAEEE /* Tab2SecondView.swift in Sources */,
 				C9BA2E9525888E00004DAEEE /* Tab2RootView.swift in Sources */,
 				C91D6C8325977BAD009A0930 /* Tab_0_0_View.swift in Sources */,
+				C91D6C982597B94D009A0930 /* Tab_1_1_View.swift in Sources */,
 				C91D6C8C25977D64009A0930 /* Screen.swift in Sources */,
 				C9BA2EA72588902F004DAEEE /* Tab1FourthView.swift in Sources */,
 				C91D6C8F25977E14009A0930 /* PushButton.swift in Sources */,
 				C9BA2EAA2588903D004DAEEE /* Tab2FourthView.swift in Sources */,
 				C9BA2E642587CA26004DAEEE /* NavigationKitDemoApp.swift in Sources */,
+				C91D6C9B2597BFEC009A0930 /* Tab_1_2_View.swift in Sources */,
 				C98651F3258B4515004833A2 /* RoundedCornerButtonStyle.swift in Sources */,
 				C9BA2EA425888FCC004DAEEE /* Tab2ThirdView.swift in Sources */,
 				C9BA2E9225888DD6004DAEEE /* Tab1RootView.swift in Sources */,
+				C91D6C9E2597C2D4009A0930 /* Tab_1_3_View.swift in Sources */,
 				C91D6C95259781FF009A0930 /* Tab_0_3_View.swift in Sources */,
 				C91D6C8925977CD0009A0930 /* Tab_0_1_View.swift in Sources */,
 				C9BA2EA125888F9D004DAEEE /* Tab1ThirdView.swift in Sources */,
