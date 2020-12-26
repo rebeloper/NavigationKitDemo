@@ -10,7 +10,7 @@ import SwiftUI
 struct Tab1ThirdView: View {
     var body: some View {
         VStack(spacing: 12) {
-            Text("Dismiss").dismisses()
+            Text("Dismiss as is").dismissesAsIs()
             Text("Push Fourth View").pushes(Tab1FourthView())
             Spacer()
         }
