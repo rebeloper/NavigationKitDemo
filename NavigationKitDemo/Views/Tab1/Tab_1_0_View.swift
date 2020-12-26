@@ -6,10 +6,9 @@
 //
 
 import SwiftUI
+import NavigationKit
 
 struct Tab_1_0_View: View {
-    
-    @EnvironmentObject private var navigationStack: NavigationStack
     
     @State private var navigationForTab_0_0_View = false
     @State private var navigationForTab_1_1_View = false
@@ -19,13 +18,13 @@ struct Tab_1_0_View: View {
             Color(.systemTeal)
             
             Sheet(isPresented: $navigationForTab_0_0_View) {
-                NavigationStackView {
+                NavigationKitView {
                     Tab_0_0_View()
                 }
             }
             
             Sheet(isPresented: $navigationForTab_1_1_View) {
-                NavigationStackView {
+                NavigationKitView {
                     Tab_1_1_View(rootView: $navigationForTab_1_1_View)
                 }
             }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NavigationKit
 
 struct Tab_1_2_View: View {
     
@@ -25,8 +26,8 @@ struct Tab_1_2_View: View {
             Spacer()
             
             Sheet(isPresented: $navigationForTab_1_3_View) {
-                NavigationStackView {
-                    Tab_1_3_View(rootView: $rootView, secondRootView: $secondRootView, thirdRootView: $navigationForTab_1_3_View)
+                NavigationKitView {
+                    Tab_1_3_View(rootView: $rootView, secondRootView: $secondRootView, thirdRootView: $navigationForTab_1_3_View).disableSwipeToDismiss()
                 }
             }
         }

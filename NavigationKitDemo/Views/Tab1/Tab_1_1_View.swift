@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import NavigationKit
 
 struct Tab_1_1_View: View {
     
@@ -18,8 +19,8 @@ struct Tab_1_1_View: View {
         VStack {
             Color(.systemRed).edgesIgnoringSafeArea(.all)
             
-            Sheet(isPresented: $navigationForTab_1_2_View) {
-                NavigationStackView {
+            FullScreenSheet(isPresented: $navigationForTab_1_2_View) {
+                NavigationKitView {
                     Tab_1_2_View(rootView: $rootView, secondRootView: $navigationForTab_1_2_View)
                 }
             }

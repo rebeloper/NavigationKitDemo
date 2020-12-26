@@ -6,20 +6,21 @@
 //
 
 import SwiftUI
+import NavigationKit
 
 struct Tab_0_3_View: View {
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigation: Navigation
     
     var body: some View {
         VStack(spacing: 12) {
             Button {
-                navigationStack.pop(to: .root)
+                navigation.pop(to: .root)
             } label: {
                 Text("Pop to Root")
             }
 
             Button {
-                navigationStack.pop(to: .view(withId: "Tab_0_1_View"))
+                navigation.pop(to: .view(withId: "Tab_0_1_View"))
             } label: {
                 Text("Pop to Tab_0_1_View")
             }
@@ -30,7 +31,7 @@ struct Tab_0_3_View: View {
                     Text("Tab_0_3_View").bold(),
                 leadingView:
                     Button {
-                        navigationStack.pop()
+                        navigation.pop()
                     } label: {
                         Label("Back", systemImage: "chevron.backward")
                     },

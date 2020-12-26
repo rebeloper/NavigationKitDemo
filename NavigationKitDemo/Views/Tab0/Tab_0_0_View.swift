@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import NavigationKit
 
 struct Tab_0_0_View: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigation: Navigation
     
     var body: some View {
         VStack {
@@ -21,7 +22,7 @@ struct Tab_0_0_View: View {
                     EmptyView(),
                 trailingView:
                     Button {
-                        navigationStack.push(Tab_0_1_View(), withId: "Tab_0_1_View")
+                        navigation.push(Tab_0_1_View(), withId: "Tab_0_1_View")
                     } label: {
                         Text("Next")
                     },

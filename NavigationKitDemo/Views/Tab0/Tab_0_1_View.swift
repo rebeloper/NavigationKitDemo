@@ -1,31 +1,37 @@
 //
-//  Tab_0_2_View.swift
+//  Tab_0_1_View.swift
 //  NavigationKitDemo
 //
 //  Created by Alex Nagy on 26.12.2020.
 //
 
 import SwiftUI
+import NavigationKit
 
-struct Tab_0_2_View: View {
+struct Tab_0_1_View: View {
     
-    @EnvironmentObject private var navigationStack: NavigationStack
+    @EnvironmentObject private var navigation: Navigation
     
     var body: some View {
         VStack {
-            Color(.systemTeal)
+            Button {
+                navigation.push(Tab_0_3_View())
+            } label: {
+                Text("Push to Tab_0_3_View")
+            }
+            Spacer()
         }
-        .largeNavigationBar(titleView:
-                    Text("Tab_0_2_View").bold(),
+        .inlineNavigationBar(titleView:
+                    Text("Tab_0_1_View").bold(),
                 leadingView:
                     Button {
-                        navigationStack.pop()
+                        navigation.pop()
                     } label: {
                         Label("Back", systemImage: "chevron.backward")
                     },
                 trailingView:
                     Button {
-                        navigationStack.push(Tab_0_3_View())
+                        navigation.push(Tab_0_2_View())
                     } label: {
                         Text("Next")
                     },
@@ -35,8 +41,8 @@ struct Tab_0_2_View: View {
     }
 }
 
-struct Tab_0_2_View_Previews: PreviewProvider {
+struct Tab_0_1_View_Previews: PreviewProvider {
     static var previews: some View {
-        Tab_0_2_View()
+        Tab_0_1_View()
     }
 }

@@ -16,7 +16,7 @@ struct NavigationKitDemoApp: App {
     var body: some Scene {
         WindowGroup {
             TabView(selection: $selectedTab) {
-                NavigationStackView {
+                NavigationKitView {
                     Tab_0_0_View()
                 }.tabItem {
                     VStack {
@@ -25,7 +25,7 @@ struct NavigationKitDemoApp: App {
                     }
                 }.tag(0)
                 
-                NavigationStackView {
+                NavigationKitView {
                     Tab_1_0_View()
                 }.tabItem {
                     Image(systemName: "1.circle.fill")
