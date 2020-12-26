@@ -12,8 +12,10 @@ class Tab_0_0_ViewModel: ObservableObject {
     @Published var text = ""
     
     func fetchData(completion: @escaping (Result<Bool, Error>) -> ()) {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 4) {
-            completion(.success(true))
+        DispatchQueue.global(qos: .background).asyncAfter(deadline: .now() + 4) {
+            DispatchQueue.main.async {
+                completion(.success(true))
+            }
         }
     }
 }
