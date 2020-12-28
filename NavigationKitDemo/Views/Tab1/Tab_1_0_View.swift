@@ -11,13 +11,27 @@ import NavigationKit
 struct Tab_1_0_View: View {
     
     @State private var navigationForTab_0_0_View = false
+    @State private var navigationForTab_0_0_View_onDismiss = false
     @State private var navigationForTab_1_1_View = false
     
     var body: some View {
         VStack {
-            Color(.systemTeal)
-            
+            Button {
+                navigationForTab_0_0_View_onDismiss.present()
+            } label: {
+                Text("Present with onDismiss callback")
+            }
+            Spacer()
+
             Sheet(isPresented: $navigationForTab_0_0_View) {
+                NavigationKitView {
+                    Tab_0_0_View()
+                }
+            }
+            
+            Sheet(isPresented: $navigationForTab_0_0_View_onDismiss) {
+                print("Dismissed Sheet. Do something here.")
+            } content: {
                 NavigationKitView {
                     Tab_0_0_View()
                 }
@@ -29,6 +43,7 @@ struct Tab_1_0_View: View {
                 }
             }
         }
+        .padding()
         .largeNavigationBar(titleView:
                     Text("Tab_1_0_View").bold().lineLimit(1),
                 leadingView:

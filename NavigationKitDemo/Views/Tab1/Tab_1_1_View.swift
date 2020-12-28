@@ -12,12 +12,18 @@ struct Tab_1_1_View: View {
     
     @Environment(\.presentationMode) var presentationMode
     @State private var navigationForTab_1_2_View = false
+    @State private var navigationForTab_1_2_View_onDismiss = false
     
     @Binding var rootView: Bool
     
     var body: some View {
         VStack {
-            Color(.systemRed).edgesIgnoringSafeArea(.all)
+            Button {
+                navigationForTab_1_2_View_onDismiss.present()
+            } label: {
+                Text("Present with onDismiss callback")
+            }
+            Spacer()
             
             FullScreenSheet(isPresented: $navigationForTab_1_2_View) {
                 NavigationKitView {
@@ -25,7 +31,15 @@ struct Tab_1_1_View: View {
                 }
             }
             
+            FullScreenSheet(isPresented: $navigationForTab_1_2_View_onDismiss) {
+                print("Dismissed FullScreenSheet. Do something here.")
+            } content: {
+                NavigationKitView {
+                    Tab_1_2_View(rootView: $rootView, secondRootView: $navigationForTab_1_2_View_onDismiss)
+                }
+            }
         }
+        .padding()
         .largeNavigationBar(titleView:
                     Text("Tab_1_1_View").bold().lineLimit(1),
                 leadingView:
