@@ -11,7 +11,7 @@ import NavigationKit
 @main
 struct NavigationKitDemoApp: App {
     
-    @State var selectedTab = 1
+    @State var selectedTab = 0
     
     var body: some Scene {
         WindowGroup {
@@ -27,12 +27,12 @@ struct NavigationKitDemoApp: App {
                     }
                 }.tag(0)
                 
-                NavigationKitView(transitionType: NavigationTransition.custom(.scale), easing: Animation.easeInOut(duration: 0.5), rootView: {
-                    Tab_1_0_View()
-                })
-//                NavigationKitView {
+//                NavigationKitView(transitionType: NavigationTransition.custom(.scale), easing: Animation.easeInOut(duration: 0.5), rootView: {
 //                    Tab_1_0_View()
-//                }
+//                })
+                NavigationKitView {
+                    Tab_1_0_View()
+                }
                 .tabItem {
                     Image(systemName: "1.circle.fill")
                     Text("One")

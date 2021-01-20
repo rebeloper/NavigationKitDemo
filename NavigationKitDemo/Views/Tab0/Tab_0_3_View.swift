@@ -39,7 +39,7 @@ struct Tab_0_3_View: View {
                 trailingView:
                     EmptyView(),
                 backgroundView:
-                    Color(.tertiarySystemBackground).edgesIgnoringSafeArea(.top)
+                    Color(.secondarySystemBackground).edgesIgnoringSafeArea(.top)
         )
     }
 }

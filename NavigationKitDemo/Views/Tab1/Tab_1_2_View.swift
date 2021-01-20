@@ -52,7 +52,7 @@ struct Tab_1_2_View: View {
                         Text("Dismiss to Root")
                     },
                 backgroundView:
-                    Color(.tertiarySystemBackground).edgesIgnoringSafeArea(.top)
+                    Color(.secondarySystemBackground).edgesIgnoringSafeArea(.top)
         )
     }
 }

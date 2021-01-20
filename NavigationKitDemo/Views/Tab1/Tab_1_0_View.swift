@@ -13,14 +13,22 @@ struct Tab_1_0_View: View {
     @State private var navigationForTab_0_0_View = false
     @State private var navigationForTab_0_0_View_onDismiss = false
     @State private var navigationForTab_1_1_View = false
+    @State private var navigationForTab_1_4_View = false
     
     var body: some View {
-        VStack {
+        VStack(spacing: 12) {
             Button {
                 navigationForTab_0_0_View_onDismiss.present()
             } label: {
                 Text("Present with onDismiss callback")
             }
+            
+            Button {
+                navigationForTab_1_4_View.present()
+            } label: {
+                Text("Present view with custom nav bar")
+            }
+            
             Spacer()
 
             Sheet(isPresented: $navigationForTab_0_0_View) {
@@ -42,6 +50,12 @@ struct Tab_1_0_View: View {
                     Tab_1_1_View(rootView: $navigationForTab_1_1_View)
                 }
             }
+            
+            Sheet(isPresented: $navigationForTab_1_4_View) {
+                NavigationKitView {
+                    Tab_1_4_View()
+                }
+            }
         }
         .padding()
         .largeNavigationBar(titleView:
@@ -59,7 +73,7 @@ struct Tab_1_0_View: View {
                         Text("Present")
                     },
                 backgroundView:
-                    Color(.tertiarySystemBackground).edgesIgnoringSafeArea(.top)
+                    Color(.secondarySystemBackground).edgesIgnoringSafeArea(.top)
         )
     }
 }

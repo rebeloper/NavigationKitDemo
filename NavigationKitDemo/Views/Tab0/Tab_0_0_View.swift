@@ -49,7 +49,7 @@ struct Tab_0_0_View: View {
                         Text("Next")
                     },
                 backgroundView:
-                    Color(.tertiarySystemBackground).edgesIgnoringSafeArea(.top)
+                    Color(.secondarySystemBackground).edgesIgnoringSafeArea(.top)
         )
 
     }

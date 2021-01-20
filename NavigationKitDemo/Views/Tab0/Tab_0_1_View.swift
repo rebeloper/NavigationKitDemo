@@ -37,7 +37,7 @@ struct Tab_0_1_View: View {
                         Text("Next")
                     },
                 backgroundView:
-                    Color(.tertiarySystemBackground).edgesIgnoringSafeArea(.top)
+                    Color(.secondarySystemBackground).edgesIgnoringSafeArea(.top)
         )
     }
 }
